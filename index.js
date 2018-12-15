@@ -29,8 +29,9 @@ restService.post("/echo", function(req, res) {
 restService.post("/add", function(req, res) {
   var num1 = req.body.queryResult.parameters.num1;
   var num2 = req.body.queryResult.parameters.num2;
+  var result = num1;
   return res.json({
-    fulfillmentText: num1 + num2,
+    fulfillmentText: result,
     source: "webhook-addition-sample"
   });
 });
