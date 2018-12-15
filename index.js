@@ -26,6 +26,15 @@ restService.post("/echo", function(req, res) {
   });
 });
 
+restService.post("/add", function(req, res) {
+  var num1 = req.body.queryResult.parameters.num1;
+  var num2 = req.body.queryResult.parameters.num2;
+  return res.json({
+    fulfillmentText: num1 + num2,
+    source: "webhook-addition-sample"
+  });
+});
+
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
