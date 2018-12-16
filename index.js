@@ -26,9 +26,10 @@ restService.post("/echo", function(req, res) {
   });
 });
 
-restService.post("/add", function(req, res) {
+restService.post("/calculator", function(req, res) {
   var num1 = req.body.queryResult.parameters.number1;
   var num2 = req.body.queryResult.parameters.number2;
+  var operation = req.body.queryResult.parameters.operator;
   var result = num1 + num2;
   return res.json({
     fulfillmentText: result,
