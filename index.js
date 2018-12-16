@@ -33,7 +33,7 @@ restService.post("/calculator", function(req, res) {
   var result = num1 + num2;
   var answer = num1 + " + " + num2 + " = " + result;
   return res.json({
-    fulfillmentText: result,
+    fulfillmentText: answer,
     source: "webhook-addition-sample"
   });
 });
