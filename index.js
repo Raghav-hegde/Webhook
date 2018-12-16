@@ -31,6 +31,7 @@ restService.post("/calculator", function(req, res) {
   var num2 = req.body.queryResult.parameters.number2;
   var operation = req.body.queryResult.parameters.operator;
   var result = num1 + num2;
+  var answer = num1 + " + " + num2 + " = " + result;
   return res.json({
     fulfillmentText: result,
     source: "webhook-addition-sample"
