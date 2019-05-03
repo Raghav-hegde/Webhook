@@ -60,13 +60,10 @@ restService.post("/poc", function(req, res) {
     //var orderNumber = req.data['OrderNum'];
     var replyMsg = "Returning from webhook";
     //console.log('intent detected: ' + intent);
-    var response = {
-        "replies": [{
-            "type": "text",
-            "content": replyMsg
-        }]
-    };
-    return response;
+    return res.json({
+        fulfillmentText: "webhook-echo-sample",
+        source: replyMsg
+    });
 });
 
 restService.listen(process.env.PORT || 8000, function() {
