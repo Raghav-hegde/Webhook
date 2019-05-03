@@ -58,7 +58,7 @@ restService.post("/poc", function(req, res) {
     //var replyMsg;
     //var intent = req.data['intent'];
     //var orderNumber = req.data['OrderNum'];
-    replyMsg = "Returning from webhook";
+    var replyMsg = "Returning from webhook";
     //console.log('intent detected: ' + intent);
     var response = {
         "replies": [{
