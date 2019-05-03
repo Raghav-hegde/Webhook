@@ -52,17 +52,17 @@ restService.post("/calculator", function(req, res) {
 
 restService.post("/poc", function(req, res) {
   		//console.log('event data: ' + JSON.stringify(event.data));	
-		  var replyMsg;
-		  var intent = req.data['intent'];
-      var orderNumber = req.data['OrderNum'];
-      replyMsg = 'Returning from webhook';
+		  //var replyMsg;
+		  //var intent = req.data['intent'];
+                  //var orderNumber = req.data['OrderNum'];
+                  replyMsg = "Returning from webhook";
 		  //console.log('intent detected: ' + intent);
   return res.json({
-		"replies": [{
+	  {"replies": [{
 					"type": "text",
 					"content": replyMsg
 				}
-			]
+			]}
   });
 });
 
