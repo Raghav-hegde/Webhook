@@ -50,6 +50,22 @@ restService.post("/calculator", function(req, res) {
   });
 });
 
+restService.post("/poc", function(req, res) {
+  		//console.log('event data: ' + JSON.stringify(event.data));	
+		  var replyMsg;
+		  var intent = req.data['intent'];
+      var orderNumber = req.data['OrderNum'];
+      replyMsg = 'Returning from webhook';
+		  //console.log('intent detected: ' + intent);
+  return res.json({
+		"replies": [{
+					"type": "text",
+					"content": replyMsg
+				}
+			]
+  });
+});
+
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
