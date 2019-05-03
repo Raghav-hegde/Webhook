@@ -58,11 +58,11 @@ restService.post("/poc", function(req, res) {
                   replyMsg = "Returning from webhook";
 		  //console.log('intent detected: ' + intent);
   return res.json({
-	  {"replies": [{
+	  "replies": [{
 					"type": "text",
 					"content": replyMsg
 				}
-			]}
+			]
   });
 });
 
