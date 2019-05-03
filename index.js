@@ -63,7 +63,7 @@ restService.post("/poc", function(req, res) {
     return res.json({
        replies: [{
       type: 'text',
-      content: 'Roger that',
+      content: 'Roger that'
     }]
     });
 });
