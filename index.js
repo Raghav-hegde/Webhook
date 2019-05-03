@@ -62,8 +62,8 @@ restService.post("/poc", function(req, res) {
     //console.log('intent detected: ' + intent);
     return res.json({
        replies: [{
-      type: 'text',
-      content: 'Roger that'
+      type: "text",
+      content: replyMsg
     }]
     });
 });
